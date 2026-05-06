@@ -31,3 +31,37 @@ $theme-colors: map-merge(
 {% endif %}
 
 @import "base", "pages", "custom";
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+$tv-gold:       #b8960c;
+$tv-gold-pale:  #f0e6b8;
+$tv-brown:      #4a2e0a;
+$tv-brown-mid:  #7a5020;
+$tv-cream:      #faf6ed;
+$tv-parchment:  #f2ead8;
+$tv-ink:        #1e1408;
+$tv-border:     #d0b878;
+
+body { background-color: $tv-cream; color: $tv-ink; font-family: 'Crimson Pro', Georgia, serif; font-size: 17px; }
+
+.navbar { background-color: $tv-parchment !important; border-bottom: 2px solid $tv-gold; }
+.navbar-brand { font-family: 'EB Garamond', serif; color: $tv-brown !important; font-size: 1.35rem; }
+.navbar-brand:hover { color: $tv-gold !important; }
+.nav-link { color: $tv-brown-mid !important; font-family: 'Crimson Pro', serif; padding: 0.75rem 1rem !important; border-bottom: 3px solid transparent; }
+.nav-link:hover, .nav-link.active { color: $tv-brown !important; border-bottom-color: $tv-gold; }
+
+h1, h2, h3, h4 { font-family: 'EB Garamond', Georgia, serif; color: $tv-brown; }
+
+.card { background-color: $tv-cream; border: 1px solid $tv-border !important; border-radius: 4px !important; }
+.card:hover { box-shadow: 0 4px 16px rgba(74,46,10,0.12); transform: translateY(-2px); }
+.card-title { font-family: 'EB Garamond', serif; color: $tv-brown; }
+
+.btn-primary, .btn-outline-primary { background-color: $tv-gold !important; border-color: $tv-gold !important; color: $tv-ink !important; }
+.btn-primary:hover { background-color: $tv-brown !important; border-color: $tv-brown !important; color: $tv-gold-pale !important; }
+
+.form-control { border-color: $tv-border !important; background-color: $tv-cream; font-family: 'Crimson Pro', serif; }
+.form-control:focus { border-color: $tv-gold !important; box-shadow: 0 0 0 3px rgba(184,150,12,0.15) !important; }
+
+footer { background-color: $tv-parchment !important; border-top: 2px solid $tv-gold; font-family: 'Crimson Pro', serif; }
+footer a { color: $tv-gold !important; }
