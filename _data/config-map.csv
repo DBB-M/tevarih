@@ -1,5 +1,6 @@
-field,display_name,search
-date,Date,true
-creator,Creator,true
-subject,Subjects,true
-location,Location,true
+field,display_name,btn,hidden
+eser_adi,Eser,false,false
+muellif_adi,Müellif,false,false
+telif_tarih_miladi,Tarih,false,false
+kutupane_koleksiyon,Kütüphane,false,false
+ulke,Ülke,false,false
