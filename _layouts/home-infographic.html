@@ -1,30 +1,89 @@
 ---
-# Default home page with boxes providing collection stats
+# Tevarih — Anasayfa
 layout: page
 ---
-<div class="row">
 
+<div class="row mt-3">
+
+  {%- comment -%} SOL KOLON {%- endcomment -%}
   <div class="col-md-8">
 
+    {%- comment -%} Proje tanıtım metni {%- endcomment -%}
     {% include index/description.html %}
-    {% include index/carousel.html title="Sample Items" height="300" %}
-  
+
+    {%- comment -%} Öne çıkan eserler carousel {%- endcomment -%}
+    {% include index/carousel.html title="Öne Çıkan Eserler" height="300" %}
+
   </div>
-  <div class="col-md-4">  
 
-    {% include index/time.html %}
+  {%- comment -%} SAĞ KOLON — filtreler ve istatistikler {%- endcomment -%}
+  <div class="col-md-4">
 
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
+    {%- comment -%} İstatistik kartı {%- endcomment -%}
+    <div class="card mb-3">
+      <div class="card-body py-3">
+        <h5 class="card-title mb-3" style="font-family:'EB Garamond',serif; color:#4a2e0a; border-bottom:1px solid #d0b878; padding-bottom:.5rem;">
+          İstatistikler
+        </h5>
+        <div class="row text-center g-2">
+          <div class="col-6">
+            <div style="background:#f2ead8; border:1px solid #d0b878; border-radius:4px; padding:.6rem;">
+              <div style="font-family:'EB Garamond',serif; font-size:1.6rem; color:#4a2e0a; line-height:1;">630</div>
+              <div style="font-size:.75rem; color:#7a5020; letter-spacing:.05em;">Eser</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:#f2ead8; border:1px solid #d0b878; border-radius:4px; padding:.6rem;">
+              <div style="font-family:'EB Garamond',serif; font-size:1.6rem; color:#4a2e0a; line-height:1;">418</div>
+              <div style="font-size:.75rem; color:#7a5020; letter-spacing:.05em;">Müellif</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:#f2ead8; border:1px solid #d0b878; border-radius:4px; padding:.6rem;">
+              <div style="font-family:'EB Garamond',serif; font-size:1.6rem; color:#4a2e0a; line-height:1;">194</div>
+              <div style="font-size:.75rem; color:#7a5020; letter-spacing:.05em;">Kütüphane</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:#f2ead8; border:1px solid #d0b878; border-radius:4px; padding:.6rem;">
+              <div style="font-family:'EB Garamond',serif; font-size:1.6rem; color:#4a2e0a; line-height:1;">20</div>
+              <div style="font-size:.75rem; color:#7a5020; letter-spacing:.05em;">Ülke</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %}
+    {%- comment -%} Zaman aralığı {%- endcomment -%}
+    <div class="card mb-3">
+      <div class="card-body py-3">
+        <h5 class="card-title mb-2" style="font-family:'EB Garamond',serif; color:#4a2e0a; border-bottom:1px solid #d0b878; padding-bottom:.5rem;">
+          Zaman Aralığı
+        </h5>
+        <p class="mb-1" style="font-size:.9rem; color:#7a5020;">
+          İlk eser: <strong style="color:#4a2e0a;">1389</strong>
+        </p>
+        <p class="mb-2" style="font-size:.9rem; color:#7a5020;">
+          Son eser: <strong style="color:#4a2e0a;">1925</strong>
+        </p>
+        <a href="{{ '/timeline.html' | relative_url }}" class="btn btn-primary btn-sm">Kronoloji →</a>
+      </div>
+    </div>
 
+    {%- comment -%} Öne çıkan müellifler {%- endcomment -%}
+    {% include index/featured-terms.html field="muellif_adi" title="Öne Çıkan Müellifler" btn-color="primary" %}
+
+    {%- comment -%} Kütüphaneler (konum) {%- endcomment -%}
+    {% include index/featured-terms.html field="sehir" title="Öne Çıkan Şehirler" btn-color="outline-secondary" %}
+
+    {%- comment -%} Nesne sayısı özeti {%- endcomment -%}
     {% include index/objects.html %}
 
   </div>
-  <div class="col-md-12">
 
+  {%- comment -%} ALT — veri indirme {%- endcomment -%}
+  <div class="col-md-12 mt-2">
     {% include index/data-download.html %}
-
   </div>
-  
+
 </div>
