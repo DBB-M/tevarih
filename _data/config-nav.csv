@@ -1,9 +1,7 @@
-display_name,stub,dropdown_parent
-Home,/
-Browse,/browse.html
-Subjects,/subjects.html
-Locations,/locations.html
-Map,/map.html
-Timeline,/timeline.html
-Data,/data.html
-About,/about.html
+display_name,stub,dropdown_parent,external_link
+Anasayfa,/,,
+Babinger,/babinger.html,,
+Keşfet,/browse.html,,
+Coğrafya,/map.html,,
+Kronoloji,/timeline.html,,
+Hakkında,/about.html,,
