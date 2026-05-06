@@ -28,10 +28,10 @@ metadata: babinger_cb
 # COLLECTION OBJECT DISPLAY
 #
 # Hangi sütun nesne başlığı olarak kullanılacak
-title-field: eser_adi
+
 
 # Hangi sütun açıklama olarak kullanılacak  
-description-field: tematik_kapsam
+
 
 # Nesne tipi (harita/timeline için önemli) — hepsi metin kaydı
 format-field: yazin_turu
