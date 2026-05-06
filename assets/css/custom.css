@@ -1,0 +1,259 @@
+/* ================================================
+   TEVARIH — Özel Stil Dosyası
+   assets/css/custom.css
+   ================================================ */
+
+/* ---------- Renk değişkenleri ---------- */
+:root {
+  --tv-gold:       #b8960c;
+  --tv-gold-light: #d4b84a;
+  --tv-gold-pale:  #f0e6b8;
+  --tv-brown:      #4a2e0a;
+  --tv-brown-mid:  #7a5020;
+  --tv-cream:      #faf6ed;
+  --tv-parchment:  #f2ead8;
+  --tv-ink:        #1e1408;
+  --tv-border:     #d0b878;
+}
+
+/* ---------- Genel gövde ---------- */
+body {
+  background-color: var(--tv-cream);
+  color: var(--tv-ink);
+  font-family: 'Crimson Pro', 'EB Garamond', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* ---------- NAVBAR — açık krem/altın ---------- */
+.navbar {
+  background-color: var(--tv-parchment) !important;
+  border-bottom: 2px solid var(--tv-gold);
+  box-shadow: 0 2px 8px rgba(74, 46, 10, 0.08);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--tv-brown) !important;
+  letter-spacing: 0.03em;
+}
+
+.navbar-brand:hover {
+  color: var(--tv-gold) !important;
+}
+
+.nav-link {
+  color: var(--tv-brown-mid) !important;
+  font-family: 'Crimson Pro', serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1rem !important;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--tv-brown) !important;
+  border-bottom-color: var(--tv-gold);
+}
+
+/* Navbar toggler (mobil) */
+.navbar-toggler {
+  border-color: var(--tv-gold) !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%237a5020' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ---------- HERO / Banner ---------- */
+#hero {
+  position: relative;
+  min-height: 380px;
+  background-color: var(--tv-brown);
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 20, 8, 0.45) 0%,
+    rgba(30, 20, 8, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+#hero .col {
+  position: relative;
+  z-index: 2;
+}
+
+#hero h1 {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #f5ecd0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  letter-spacing: 0.02em;
+}
+
+#hero .tagline,
+#hero p {
+  color: #d4b878;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Süsleme çizgisi ---------- */
+.cb-feature::before,
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--tv-gold);
+  margin: 0.5rem 0 1rem;
+}
+
+/* ---------- Kartlar ---------- */
+.card {
+  background-color: var(--tv-cream);
+  border: 1px solid var(--tv-border) !important;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 4px rgba(74, 46, 10, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(74, 46, 10, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--tv-brown);
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--tv-brown-mid);
+}
+
+/* ---------- Butonlar ---------- */
+.btn-primary,
+.btn-outline-primary {
+  background-color: var(--tv-gold) !important;
+  border-color: var(--tv-gold) !important;
+  color: var(--tv-ink) !important;
+  font-family: 'Crimson Pro', serif;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+}
+
+.btn-primary:hover,
+.btn-outline-primary:hover {
+  background-color: var(--tv-brown) !important;
+  border-color: var(--tv-brown) !important;
+  color: var(--tv-gold-pale) !important;
+}
+
+/* ---------- Sayfa başlıkları ---------- */
+h1, h2, h3, h4 {
+  font-family: 'EB Garamond', Georgia, serif;
+  color: var(--tv-brown);
+}
+
+/* ---------- Arama kutusu ---------- */
+#search-input,
+.form-control {
+  border-color: var(--tv-border) !important;
+  border-radius: 3px;
+  background-color: var(--tv-cream);
+  color: var(--tv-ink);
+  font-family: 'Crimson Pro', serif;
+}
+
+#search-input:focus,
+.form-control:focus {
+  border-color: var(--tv-gold) !important;
+  box-shadow: 0 0 0 3px rgba(184, 150, 12, 0.15) !important;
+}
+
+/* ---------- Badge / etiketler ---------- */
+.badge,
+.subject-badge {
+  background-color: var(--tv-gold-pale) !important;
+  color: var(--tv-brown) !important;
+  border: 1px solid var(--tv-border);
+  font-weight: 400;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.85rem;
+  border-radius: 2px;
+}
+
+/* ---------- Timeline ---------- */
+.timeline-item {
+  border-left: 2px solid var(--tv-gold);
+}
+
+/* ---------- Harita ---------- */
+#map {
+  border: 2px solid var(--tv-border);
+  border-radius: 4px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--tv-parchment) !important;
+  border-top: 2px solid var(--tv-gold);
+  color: var(--tv-brown-mid) !important;
+  font-family: 'Crimson Pro', serif;
+}
+
+footer a {
+  color: var(--tv-gold) !important;
+}
+
+/* ---------- Metadata detay sayfası ---------- */
+.metadata-field-label {
+  font-weight: 600;
+  color: var(--tv-brown-mid);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.metadata-field-value {
+  color: var(--tv-ink);
+  font-size: 1rem;
+}
+
+/* ---------- Sidebar filtreler ---------- */
+.cb-sidebar .card {
+  background-color: var(--tv-parchment);
+}
+
+/* ---------- Osmanlı süsleme: sayfa üst dekoratif hat ---------- */
+.container-fluid > .row:first-child::before {
+  display: block;
+  text-align: center;
+  color: var(--tv-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.4em;
+  padding: 0.4rem 0;
+  background: var(--tv-parchment);
+  border-bottom: 1px solid var(--tv-border);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  #hero h1 { font-size: 1.8rem; }
+  .navbar-brand { font-size: 1.1rem; }
+}
