@@ -34,10 +34,14 @@ locations-min: 1
 ##########
 # MAP
 #
-latitude-field: latitude
-longitude-field: longitude
-map-base: Esri_WorldShadedRelief
+map-base: Esri_WorldStreetMap
+map-cluster: true
+map-cluster-radius: 25
+map-search: true
+map-search-fuzziness: 0.35
 map-zoom: 4
+map-center-lat: 45
+map-center-long: 20
 
 ##########
 # TIMELINE
