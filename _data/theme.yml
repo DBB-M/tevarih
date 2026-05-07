@@ -48,8 +48,8 @@ zoom-level: 4
 ##########
 # TIMELINE
 #
-timeline-field: telif_tarih_miladi
-timeline-bin: decade
+timeline-field: date
+year-nav-increment: 50
 
 ##########
 # FONTS
