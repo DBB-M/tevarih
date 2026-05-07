@@ -1,8 +1,10 @@
 ---
-title: Timeline
+title: Kronoloji
 layout: timeline
 permalink: /timeline.html
-# a timeline visualization will be added below the content in this file
+# Telif tarihine göre kronolojik sıralama
+# theme.yml'de: timeline-field: date
 ---
+## Kronoloji
 
-## Collection Timeline
+Eserlerin telif tarihlerine göre dağılımı.
